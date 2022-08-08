@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djikstra Community Forum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/Plug-in/boxicons-2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="left-nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="forum.html">Questions</a></li>
+                <li><a href="learn.html">Video Learning</a></li>
+                <li><a href="job.html">Find a Job</a></li>
+                <li class="btn-login"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="close-btn">
+            <i class='bx bx-x'></i>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="web-nav">
+            <div class="container">
+                <div class="header-logo">
+                    <span>Dj.</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="forum.html">Questions</a></li>
+                        <li><a href="learn.html">Video Learning</a></li>
+                        <li><a href="job.html">Find a Job</a></li>
+                        <li class="btn-login"><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <header class="mobile-nav">
+            <div class="container">
+                <div class="burger-bar">
+                    <i class='bx bx-menu-alt-left'></i>
+                </div>
+                <div class="header-logo">
+                    <span>Dj.</span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="bg-forum">
+                <div class="container">
+                    <div class="forum-judul">
+                        <h1>Questions</h1>
+                        <button>Search & Filter <i class='bx bxs-chevron-down' ></i></button>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 mobile">
+                            <div class="sidebar-forum-mobile">
+                                <h3>Search</h3>
+                                <div class="input-search">
+                                    <div class="flex">
+                                        <input type="search" placeholder="Search ...">
+                                        <select name="" id="">
+                                            <option value="question">Question</option>
+                                            <option value="tag">Tag</option>
+                                        </select> 
+                                    </div>
+                                    <button><i class='bx bx-search-alt'></i> Search</button>
+                                </div>
+                                <hr>
+                                <h4>Order</h4>
+                                <select name="" id="" class="order-select">
+                                    <option value="active">Newest</option>
+                                    <option value="newest">Active</option>
+                                    <option value="unaswered">Unanswered</option>
+                                </select>
+                                <h4>Popular Category</h4>
+                                <div class="sidebar-category">
+                                    <div class="category">
+                                        <i class='bx bxl-nodejs' ></i>
+                                        <p>Node</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-vuejs' ></i>
+                                        <p>Vue</p>
+                                    </div>
+                                    <div class="category category-active">
+                                        <i class='bx bxl-react' ></i>
+                                        <p>React</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-git' ></i>
+                                        <p>Git</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-python' ></i>
+                                        <p>Python</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-c-plus-plus' ></i>
+                                        <p>C++</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                            <div class="forum-question">
+                                <div class="question-card">
+                                    <div class="question-text">
+                                        <a href="detailForum.html"><h2>How to test if a component is rendered with the right props when using react-testing-library?</h2></a>
+                                        <div class="question-tags">
+                                            <a href="#">javascript</a> <a href="#">jestjs</a>
+                                        </div>
+                                        <div class="question-info">
+                                            <p>
+                                                7 Hours Ago / <a href="profile.html">Adi Adnyana</a>
+                                            </p>
+                                            <a href="profile.html"><img src="assets/images/261413.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="question-number">
+                                        <div class="num-sq">
+                                            <span>1</span>
+                                            <p>Vote</p>
+                                        </div>
+                                        <div class="num-sq">
+                                            <span>12</span>
+                                            <p>View</p>
+                                        </div>
+                                        <div class="num-sq num-active">
+                                            <span>2</span>
+                                            <p>Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question-card">
+                                    <div class="question-text">
+                                        <a href="detailForum.html"><h2>How do i add functionality to my nav dots in my image slider?</h2></a>
+                                        <div class="question-tags">
+                                            <a href="#">javascript</a> <a href="#">html</a>
+                                        </div>
+                                        <div class="question-info">
+                                            <p>
+                                                7 Hours Ago / <a href="profile.html">Adi Adnyana</a>
+                                            </p>
+                                            <a href="profile.html"><img src="assets/images/261413.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="question-number">
+                                        <div class="num-sq">
+                                            <span>-1</span>
+                                            <p>Vote</p>
+                                        </div>
+                                        <div class="num-sq">
+                                            <span>5</span>
+                                            <p>View</p>
+                                        </div>
+                                        <div class="num-sq">
+                                            <span>0</span>
+                                            <p>Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question-card">
+                                    <div class="question-text">
+                                        <a href="detailForum.html"><h2>How to test if a component is rendered with the right props when using react-testing-library?</h2></a>
+                                        <div class="question-tags">
+                                            <a href="#">javascript</a> <a href="#">jestjs</a>
+                                        </div>
+                                        <div class="question-info">
+                                            <p>
+                                                7 Hours Ago / <a href="profile.html">Adi Adnyana</a>
+                                            </p>
+                                            <a href="profile.html"><img src="assets/images/261413.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="question-number">
+                                        <div class="num-sq">
+                                            <span>1</span>
+                                            <p>Vote</p>
+                                        </div>
+                                        <div class="num-sq">
+                                            <span>12</span>
+                                            <p>View</p>
+                                        </div>
+                                        <div class="num-sq num-active">
+                                            <span>2</span>
+                                            <p>Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question-card">
+                                    <div class="question-text">
+                                        <a href="detailForum.html"><h2>How do i add functionality to my nav dots in my image slider?</h2></a>
+                                        <div class="question-tags">
+                                            <a href="#">javascript</a> <a href="#">html</a>
+                                        </div>
+                                        <div class="question-info">
+                                            <p>
+                                                7 Hours Ago / <a href="profile.html">Adi Adnyana</a>
+                                            </p>
+                                            <a href="profile.html"><img src="assets/images/261413.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="question-number">
+                                        <div class="num-sq">
+                                            <span>-1</span>
+                                            <p>Vote</p>
+                                        </div>
+                                        <div class="num-sq">
+                                            <span>5</span>
+                                            <p>View</p>
+                                        </div>
+                                        <div class="num-sq">
+                                            <span>0</span>
+                                            <p>Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question-card">
+                                    <div class="question-text">
+                                        <a href="detailForum.html"><h2>How to test if a component is rendered with the right props when using react-testing-library?</h2></a>
+                                        <div class="question-tags">
+                                            <a href="#">javascript</a> <a href="#">jestjs</a>
+                                        </div>
+                                        <div class="question-info">
+                                            <p>
+                                                7 Hours Ago / <a href="profile.html">Adi Adnyana</a>
+                                            </p>
+                                            <a href="profile.html"><img src="assets/images/261413.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="question-number">
+                                        <div class="num-sq">
+                                            <span>1</span>
+                                            <p>Vote</p>
+                                        </div>
+                                        <div class="num-sq">
+                                            <span>12</span>
+                                            <p>View</p>
+                                        </div>
+                                        <div class="num-sq num-active">
+                                            <span>2</span>
+                                            <p>Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-more">
+                                <button>Load More Question</button>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                            <div class="sidebar-forum">
+                                <h3>Search</h3>
+                                <div class="input-search">
+                                    <div class="flex">
+                                        <input type="search" placeholder="Search ...">
+                                        <select name="" id="">
+                                            <option value="question">Question</option>
+                                            <option value="tag">Tag</option>
+                                        </select> 
+                                    </div>
+                                    <button><i class='bx bx-search-alt'></i> Search</button>
+                                </div>
+                                <hr>
+                                <h4>Order</h4>
+                                <select name="" id="" class="order-select">
+                                    <option value="active">Newest</option>
+                                    <option value="newest">Active</option>
+                                    <option value="unaswered">Unanswered</option>
+                                </select>
+                                <h4>Popular Category</h4>
+                                <div class="sidebar-category">
+                                    <div class="category">
+                                        <i class='bx bxl-nodejs' ></i>
+                                        <p>Node</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-vuejs' ></i>
+                                        <p>Vue</p>
+                                    </div>
+                                    <div class="category category-active">
+                                        <i class='bx bxl-react' ></i>
+                                        <p>React</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-git' ></i>
+                                        <p>Git</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-python' ></i>
+                                        <p>Python</p>
+                                    </div>
+                                    <div class="category">
+                                        <i class='bx bxl-c-plus-plus' ></i>
+                                        <p>C++</p>
+                                    </div>
+                                </div>
+                                <div class="sidebar-line">
+                                    <p><span>or</span></p>
+                                    <hr>
+                                </div>
+                                <button class="sidebar-btn-ask">Ask Question</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-desc">
+                        <h2>Djikstra Tech Community Forum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi ad doloribus reiciendis, labore at. Laboriosam esse ea eum inventore a aliquid cum iste sequi.
+                        </p>
+                    </div>
+                    <div class="footer-link">
+                        <h3>Feature</h3>
+                        <ul>
+                            <li><a href="#">Question</a></li>
+                            <li><a href="#">Video Learning</a></li>
+                            <li><a href="#">Find a Job</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer-link">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <hr>
+                <div class="footer-extention">
+                    <p>
+                        &copy; 2021 Djikstra. All Rights Reserved
+                    </p>
+                    <div class="footer-logo">
+                        <span>Dj.</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="btn-ask-out">
+            <p>Ask Question</p>
+            <button><i class='bx bx-plus'></i></button>
+        </div>
+    </div>
+    <script src="assets/Plug-in/jquery v3.6.0/jquery.js"></script>
+    <script>
+        $('.forum-judul button').click(() => {
+            $('.mobile').toggle('fast');
+        });
+
+        $('.question-more').click(() => {
+            $('.forum-question').append(`
+                <div class="question-card">
+                    <div class="question-text">
+                        <a href="#"><h2>How to test if a component is rendered with the right props when using react-testing-library?</h2></a>
+                        <div class="question-tags">
+                            <a href="#">javascript</a> <a href="$">jestjs</a>
+                        </div>
+                        <div class="question-info">
+                            <p>
+                                7 Hours Ago / <a href="#">Adi Adnyana</a>
+                            </p>
+                            <a href="#"><img src="assets/images/261413.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="question-number">
+                        <div class="num-sq">
+                            <span>1</span>
+                            <p>Vote</p>
+                        </div>
+                        <div class="num-sq">
+                            <span>12</span>
+                            <p>View</p>
+                        </div>
+                        <div class="num-sq num-active">
+                            <span>2</span>
+                            <p>Answer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-card">
+                    <div class="question-text">
+                        <a href="#"><h2>How do i add functionality to my nav dots in my image slider?</h2></a>
+                        <div class="question-tags">
+                            <a href="#">javascript</a> <a href="$">html</a>
+                        </div>
+                        <div class="question-info">
+                            <p>
+                                7 Hours Ago / <a href="#">Adi Adnyana</a>
+                            </p>
+                            <a href="#"><img src="assets/images/261413.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="question-number">
+                        <div class="num-sq">
+                            <span>-1</span>
+                            <p>Vote</p>
+                        </div>
+                        <div class="num-sq">
+                            <span>5</span>
+                            <p>View</p>
+                        </div>
+                        <div class="num-sq">
+                            <span>0</span>
+                            <p>Answer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-card">
+                    <div class="question-text">
+                        <a href="#"><h2>How to test if a component is rendered with the right props when using react-testing-library?</h2></a>
+                        <div class="question-tags">
+                            <a href="#">javascript</a> <a href="$">jestjs</a>
+                        </div>
+                        <div class="question-info">
+                            <p>
+                                7 Hours Ago / <a href="#">Adi Adnyana</a>
+                            </p>
+                            <a href="#"><img src="assets/images/261413.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="question-number">
+                        <div class="num-sq">
+                            <span>1</span>
+                            <p>Vote</p>
+                        </div>
+                        <div class="num-sq">
+                            <span>12</span>
+                            <p>View</p>
+                        </div>
+                        <div class="num-sq num-active">
+                            <span>2</span>
+                            <p>Answer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-card">
+                    <div class="question-text">
+                        <a href="#"><h2>How do i add functionality to my nav dots in my image slider?</h2></a>
+                        <div class="question-tags">
+                            <a href="#">javascript</a> <a href="$">html</a>
+                        </div>
+                        <div class="question-info">
+                            <p>
+                                7 Hours Ago / <a href="#">Adi Adnyana</a>
+                            </p>
+                            <a href="#"><img src="assets/images/261413.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="question-number">
+                        <div class="num-sq">
+                            <span>-1</span>
+                            <p>Vote</p>
+                        </div>
+                        <div class="num-sq">
+                            <span>5</span>
+                            <p>View</p>
+                        </div>
+                        <div class="num-sq">
+                            <span>0</span>
+                            <p>Answer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-card">
+                    <div class="question-text">
+                        <a href="#"><h2>How to test if a component is rendered with the right props when using react-testing-library?</h2></a>
+                        <div class="question-tags">
+                            <a href="#">javascript</a> <a href="$">jestjs</a>
+                        </div>
+                        <div class="question-info">
+                            <p>
+                                7 Hours Ago / <a href="#">Adi Adnyana</a>
+                            </p>
+                            <a href="#"><img src="assets/images/261413.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="question-number">
+                        <div class="num-sq">
+                            <span>1</span>
+                            <p>Vote</p>
+                        </div>
+                        <div class="num-sq">
+                            <span>12</span>
+                            <p>View</p>
+                        </div>
+                        <div class="num-sq num-active">
+                            <span>2</span>
+                            <p>Answer</p>
+                        </div>
+                    </div>
+                </div>
+            `)
+        })
+    </script>
+</body>
+</html>

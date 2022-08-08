@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djikstra Community Forum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/Plug-in/boxicons-2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="left-nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="forum.html">Questions</a></li>
+                <li><a href="learn.html">Video Learning</a></li>
+                <li><a href="job.html">Find a Job</a></li>
+                <li class="btn-login"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="close-btn">
+            <i class='bx bx-x'></i>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="web-nav">
+            <div class="container">
+                <div class="header-logo">
+                    <span>Dj.</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="forum.html">Questions</a></li>
+                        <li><a href="learn.html">Video Learning</a></li>
+                        <li><a href="job.html">Find a Job</a></li>
+                        <li class="btn-login"><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <header class="mobile-nav">
+            <div class="container">
+                <div class="burger-bar">
+                    <i class='bx bx-menu-alt-left'></i>
+                </div>
+                <div class="header-logo">
+                    <span>Dj.</span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="bg-diskusi">
+                <div class="container">
+                    <div class="diskusi-judul">
+                        <h1>How to test if a component is rendered with the right props when using react-testing-library? </h1>
+                        <div class="diskusi-profile">
+                            <a href="profile.html">
+                                <img src="assets/images/261413.jpg" alt="User">
+                                <div>
+                                    <span>Adi Adnyana</span>
+                                    <span>7 Hours Ago</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                            <div class="diskusi-detail">
+                                <p>
+                                    I have some components that are rendering another component (FetchNextPageButton) that is already tested in isolation, like these ones:
+                                </p>
+                                <pre>
+<code>
+    const News = () => (
+    &lt;div&gt;
+        &lt;h1>News&lt;/h1&gt;
+        ...
+        &lt;FetchNextPageButton query={NEWS_QUERY} path="viewer.news" /&gt;
+    &lt;/div&gt;
+    )
+
+    const Jobs = () =&gt; (
+    &lt;div&gt;
+        &lt;h1&gt;Jobs&lt;/h1&gt;
+        ...
+        &lt;FetchNextPageButton query={JOBS_QUERY} path="viewer.jobs" /&gt;
+    &lt;/div&gt;
+    )
+
+    const Posts = () =&gt; (
+    &lt;div&gt;
+        &lt;h1&gt;Posts&lt;/h1&gt;
+        ...
+        &lt;FetchNextPageButton query={POSTS_QUERY} path="viewer.posts" /&gt;
+    &lt;/div&gt;
+    )
+</code>
+                                </pre>
+                                <p>
+                                    The thing is that I'd not like having to add tests on each of these components for a functionality that is already tested somewhere else, so I think that should be enough just to test that the component is rendered and that I'm passing the right props to it.
+                                    <br><br>
+                                    I'd have been able to test this easily with Enzyme with something like this:
+                                </p>
+                                <pre>
+<code>
+    expect(wrapper.find('FetchNextPageButton').props()).toMatchObject({
+        query: NEWS_QUERY,
+        path: "viewer.news"
+    })
+</code>
+                                </pre>
+                                <p>
+                                    So I'm wondering what's the best approach to test it by using React testing library instead.
+                                </p>
+                                <div class="diskusi-extention">
+                                    <div class="diskusi-tag">
+                                        <a href="#">javascript</a> <a href="#">jestjs</a>
+                                    </div>
+                                    <div class="diskusi-vote">
+                                        <button><i class='bx bxs-up-arrow'></i>Useful</button>
+                                        <div><span>1</span>Vote</div>
+                                        <button><i class='bx bxs-down-arrow'></i>Not Useful</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="diskusi-answer">
+                                <span class="answer-num">2 Answer</span>
+                                <div class="answer-card">
+                                    <div class="answer-head">
+                                        <div class="diskusi-profile">
+                                            <a href="profile.html">
+                                                <img src="assets/images/261413.jpg" alt="User">
+                                                <div>
+                                                    <span>Adi Adnyana</span>
+                                                    <span>7 Hours Ago</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="answer-icon">
+                                            <i class='bx bx-check'></i>
+                                        </div>
+                                    </div>
+                                    <div class="answer-body">
+                                        <p>
+                                            This is the approach that Kent C. Dodds (the creator of RTL) shared with me after discussing it with him:
+                                        </p>
+                                        <pre>
+<code>
+    import FetchNextPageButton from 'FetchNextPageButton'
+
+    jest.mock('FetchNextPageButton', () => {
+    return jest.fn(() => null)
+    })
+
+    // ... in your test
+    expect(FetchNextPageButton).toHaveBeenCalledWith(props, context)
+</code>
+                                        </pre>
+                                    </div>
+                                    <div class="answer-extention">
+                                        <div class="diskusi-vote">
+                                            <button><i class='bx bxs-up-arrow'></i>Useful</button>
+                                            <div><span>2</span>Vote</div>
+                                            <button><i class='bx bxs-down-arrow'></i>Not Useful</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer-card">
+                                    <div class="answer-head">
+                                        <div class="diskusi-profile">
+                                            <a href="profile.html">
+                                                <img src="assets/images/261413.jpg" alt="User">
+                                                <div>
+                                                    <span>Adi Adnyana</span>
+                                                    <span>5 Hours Ago</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="answer-body">
+                                        <p>
+                                            Don't believe it's possible. RTL looks like focusing on validating against DOM not React's components tree.
+                                            <br><br>
+                                            The only workaround I see is to mock FetchNextPageButton to make it rendering all props into attributes.
+                                        </p>
+                                        <pre>
+<code>
+    jest.mock("../../../FetchNextPageButton.js", () => 
+    (props) => &lt;div data-test-id="FetchNextPageButton" {...props} /&gt;);
+    ....
+    const { getByTestId } = render(&lt;YourComponent /&gt;);
+    expect(getByTestId("FetchNextPageButton")).toHaveAttribute("query", NEWS_QUERY);
+    expect(getByTestId("FetchNextPageButton")).toHaveAttribute("path", "viewer.news");
+</code>
+                                        </pre>
+                                        <p>
+                                            Sure, this is smoothly only for primitive values in props, but validating something like object or function would be harder.
+                                            <br><br>
+                                            Think, it's not RTL-way, but I agree it would be massive work to check that in scope of each container(and completely ignoring that would be rather a risk).
+                                            <br><br>
+                                            PS toHaveAttribute is from jest-dom
+                                        </p>
+                                    </div>
+                                    <div class="answer-extention">
+                                        <div class="diskusi-vote">
+                                            <button><i class='bx bxs-up-arrow'></i>Useful</button>
+                                            <div><span>1</span>Vote</div>
+                                            <button><i class='bx bxs-down-arrow'></i>Not Useful</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-answer">
+                                <span class="answer-num">Your Answer</span>
+                                <div class="answer-form">
+                                    <div class="answer-form-common">
+                                        <button><i class='bx bx-bold' ></i></button> <button><i class='bx bx-italic' ></i></button> <button><i class='bx bx-list-ul' ></i></button>
+                                    </div>
+                                    <textarea placeholder="Write your answer here ..."></textarea>
+                                    <div class="answer-addition">
+                                        <ul>
+                                            <li><i class='bx bx-image-alt' ></i> Add Image</li>
+                                            <li><i class='bx bx-code' ></i> Add Code</li>
+                                        </ul>
+                                        <div class="answer-addition-button">
+                                            <button><i class='bx bx-plus' ></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                            <div class="diskusi-side">
+                                <button class="btn-diskusi-ask">Ask Question</button>
+                                <div class="diskusi-relate">
+                                    <h2>Related Question</h2>
+                                    <ul>
+                                        <li>
+                                            <span>1697</span>
+                                            <h3>How to loop through a plain JavaScript object with the objects as members</h3>
+                                        </li>
+                                        <li>
+                                            <span>661</span>
+                                            <h3>What is the difference between state and props in React?</h3>
+                                        </li>
+                                        <li>
+                                            <span>600</span>
+                                            <h3>What's the difference between “super()” and “super(props)” in React when using es6 classes?</h3>
+                                        </li>
+                                        <li>
+                                            <span>20</span>
+                                            <h3>How to test decorated React component with shallow rendering</h3>
+                                        </li>
+                                        <li class="diskusi-relate-active">
+                                            <span>3</span>
+                                            <h3>Testing changes to React component state and spying on instance methods using enzyme</h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="diskusi-job">
+                                    <h2>Related Job</h2>
+                                    <div class="diskusi-job-card">
+                                        <img src="assets/images/kappa.png" alt="Kappa">
+                                        <div class="diskusi-job-text">
+                                            <h3>Frontend Developer</h3>
+                                            <p><span>Kappa.London</span> . Indonesia</p>
+                                            <p class="diskusi-job-feature">
+                                                <span><i class='bx bx-dollar-circle' ></i> 5 - 6jt</span>.<span><i class='bx bx-wifi-2' ></i> Remote</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="diskusi-job-card">
+                                        <img src="assets/images/assemblr.jpeg" alt="Assemblr">
+                                        <div class="diskusi-job-text">
+                                            <h3>React JS Developer</h3>
+                                            <p><span>Assemblr</span> . Bandung</p>
+                                            <p class="diskusi-job-feature">
+                                                <span><i class='bx bx-dollar-circle' ></i> 4 - 5jt</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="diskusi-job-card">
+                                        <img src="assets/images/bibit.png" alt="Bibit.id">
+                                        <div class="diskusi-job-text">
+                                            <h3>React.js Developer</h3>
+                                            <p><span>Bibit.id</span> . Jakarta</p>
+                                            <p class="diskusi-job-feature">
+                                                <span><i class='bx bx-dollar-circle' ></i> 4 - 7jt</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="diskusi-job-card">
+                                        <img src="assets/images/flip.png" alt="Flip.id">
+                                        <div class="diskusi-job-text">
+                                            <h3>Software Engineer (Mobile - React Native)</h3>
+                                            <p><span>Flip.id</span> . Jakarta</p>
+                                            <p class="diskusi-job-feature">
+                                                <span><i class='bx bx-dollar-circle' ></i> 5 - 7jt</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="diskusi-job-card">
+                                        <img src="assets/images/shopee.jpeg" alt="Shopee">
+                                        <div class="diskusi-job-text">
+                                            <h3>Front End Web Engineer</h3>
+                                            <p><span>Shopee</span> . Jakarta</p>
+                                            <p class="diskusi-job-feature">
+                                                <span><i class='bx bx-dollar-circle' ></i> 6 - 7jt</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-desc">
+                        <h2>Djikstra Tech Community Forum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi ad doloribus reiciendis, labore at. Laboriosam esse ea eum inventore a aliquid cum iste sequi.
+                        </p>
+                    </div>
+                    <div class="footer-link">
+                        <h3>Feature</h3>
+                        <ul>
+                            <li><a href="#">Question</a></li>
+                            <li><a href="#">Video Learning</a></li>
+                            <li><a href="#">Find a Job</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer-link">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <hr>
+                <div class="footer-extention">
+                    <p>
+                        &copy; 2021 Djikstra. All Rights Reserved
+                    </p>
+                    <div class="footer-logo">
+                        <span>Dj.</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/Plug-in/jquery v3.6.0/jquery.js"></script>
+    <script>
+        $('.answer-addition-button button').click(() => {
+            $('.answer-addition ul').toggle('fast');
+        })
+    </script>
+</body>
+</html>
